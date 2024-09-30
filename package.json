@@ -1,0 +1,14 @@
+{
+  "name": "trackip",
+  "version": "1.0.0",
+  "description": "Track and store your WAN IP address to a supabase DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dino Krtanjek <krtanjekdino@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  }
+}

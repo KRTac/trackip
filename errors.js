@@ -34,11 +34,11 @@ async function dbError(message) {
     });
 }
 
-function localError(msg) {
-  console.log('Error:', message);
+function localError(message) {
+  console.log('Error:', message, supabase);
   initCacheDir();
 
-  fs.writeFileSync(errorPath, msg, { encoding: 'utf8' });
+  fs.writeFileSync(errorPath, message, { encoding: 'utf8' });
 }
 
 module.exports = { 

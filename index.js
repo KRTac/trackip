@@ -31,6 +31,8 @@ https.get('https://icanhazip.com/', (res) => {
         .from('addresses')
         .update({ last_checked_at: new Date().toISOString() })
         .eq('id', lastReported[0].id);
+
+      console.log(`No IP address change detected, updating last checked timestamp. IP: ${currentIp}`);
     } else {
       await supabase
         .from('addresses')
@@ -44,6 +46,8 @@ https.get('https://icanhazip.com/', (res) => {
       initCacheDir();
 
       fs.writeFileSync(latestPath, currentIp, { encoding: 'utf8' });
+
+      console.log(`Detected and reported IP address change. Old IP: ${lastReported[0].address} IP: ${currentIp}`);
     }
   });
 }).on('error', () => {

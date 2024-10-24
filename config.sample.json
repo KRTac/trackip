@@ -1,5 +1,10 @@
 {
+  // Project URL. Found in the API configuration page of the project settings page.
   "supabaseUrl": "https://XXX.supabase.co",
+  // The project API key from the same API page as above.
   "supabaseKey": "",
+  // The duration of the IP checking interval in minutes. Set it the same as you did in your cron job.
+  // Example crontab entry that runs every fifth minute of the hour indefinitely:
+  // */5 * * * *      node ~/trackip/index.js
   "interval": 5
 }
